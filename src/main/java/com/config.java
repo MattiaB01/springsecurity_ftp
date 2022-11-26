@@ -47,6 +47,9 @@ public class config extends WebSecurityConfigurerAdapter {
 		            .logout()  	
 		            .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/index")
 		            .permitAll();
+		http.requiresChannel()
+	      .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
+	      .requiresSecure();
 	}
 
 	// Function to encode the password
