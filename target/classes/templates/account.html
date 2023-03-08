@@ -1,0 +1,77 @@
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<!--link rel="stylesheet" th:href="@{styles/lista.css}"-->
+	<link rel="stylesheet" th:href="@{styles/empty.css}">
+	<title> Gestione account </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+<div class="container">
+	  <div class="links">
+               <a th:href="@{/lista}" class="button"> Lista<br> files </a>
+               <a th:href="@{/account}" class="button"> Gestisci account </a>
+               <a th:href="@{/logout}" class="button" id="logout"> Logout </a>
+               
+                </div>	
+</div>
+	<div class="container">
+		<div class="items">
+		  		<div class="items-head">
+					<p>Gestisci il tuo account</p>
+					<hr>
+		  		</div>
+			  	<div class="items-body">
+		 	 
+			  		<p>eliminare l'account comporterà l'eliminazione di tutti i files caricati</p>
+					 <a onclick="mostra()" class="button" id="elimina">Elimina il tuo account</a>
+					 
+				</div>
+			  	
+		</div>
+			
+	</div>
+
+
+	<div class="conferma"  id="myDIV">
+		<div class="container">
+		<div class="items2">
+		  		<div class="items-head2">
+					<p>Sei sicuro?</p>
+					<hr>
+		  		</div>
+			  	<div class="items-body2">
+		 	 
+			  
+					 <a th:href="@{/deletecurrent}" class="button2">Si</a>
+					 <a href="#" onclick="no()" class="button2">No</a>
+			   
+				</div>
+			  	
+		</div>
+			
+	</div>
+			
+	</div>
+	  	  
+		  
+  
+</body>
+
+</html>
+
+<script>
+	function mostra() {
+	 /* alert("Hello! I am an alert box!");*/
+	
+	  document.getElementById("myDIV").style.display = "flex";
+}
+	
+function no()
+{
+	document.getElementById("myDIV").style.display = "none";
+
+}
+	</script>
+	

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Lista files </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" th:href="@{styles/empty.css}">
+      <div class="container">
+
+           
+                <div class="links">
+                    <a th:href="@{/upload}" class="button"> Upload<br> files </a>
+            <a th:href="@{/account}" class="button"> Gestisci account </a>
+               <a th:href="@{/logout}" class="button" id="logout"> Logout </a>
+               
+                </div>	
+   
+            
+
+        </div>
+
+        
+	<div class="container">
+		<div class="items">
+		  <div class="items-head">
+			<p>Lista dei file presenti</p>
+			<hr>
+		  </div>
+		  <div th:switch="${files}">
+		  <div class="items-body">
+		  	<p th:case="null">Lista vuota</p>
+		  	<div th:case="*">
+			<div class="items-body-content" th:each="file : ${files}">
+			
+				
+			  <span th:text="${file}"></span>
+			 
+			  
+			  <button class="elimina"><a th:href="@{/delete/{file}(file=${file})}"
+			   th:data-confirm-delete="|Conferma elminazione utente: ${file}?|"
+  			onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false"> elimina </a> </button>
+			   <button class="download" ><a th:href="@{/download/{file}(file=${file})}">download</a></button>
+			  </div>
+			  	
+			</div>
+			  </div>
+			
+			
+			
+			
+		  </div>
+		</div>
+	  </div>
+	 
+
+    </head>
+
+
+
+</html>

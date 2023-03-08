@@ -1,0 +1,56 @@
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" th:href="@{styles/empty.css}">
+	<title> Upload </title>
+</head>
+
+<body>
+  <div class="container">
+
+           
+                <div class="links">
+               <a th:href="@{/lista}" class="button"> Lista<br> files </a>
+               <a th:href="@{/account}" class="button"> Gestisci account </a>
+               <a th:href="@{/logout}" class="button" id="logout"> Logout </a>
+               
+                </div>	
+   
+            
+
+        </div>
+
+	<div class="container">
+		<div class="items">
+		  <div class="items-head">
+			<p>Scegli il file per l'upload</p>
+			<hr>
+		  </div>
+		  
+		  <div class="items-body">
+			<div class="items-body-content">
+			
+			 
+			  <form method="POST" enctype="multipart/form-data" th:action="@{/upload}">
+					<label> Scegli il file da caricare [max 1Kb]<br></label>
+					
+					
+					<input class="file2" id="file-upload" type="file" name="file"/>
+							<br><br><input  type="submit" value="Upload" class="inp_btn" />			
+				</form>
+				
+				 
+			</div>
+			
+			
+			
+			
+		  </div>
+		</div>
+	  </div>
+
+	
+
+</body>
+
+</html>

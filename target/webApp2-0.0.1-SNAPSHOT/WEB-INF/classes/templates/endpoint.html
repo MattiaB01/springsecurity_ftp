@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="main.css">
+<title> CSS Login Screen Tutorial </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+<body>
+  <body>
+    <nav class="navMenu">
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">Work</a>
+      <a href="#">About</a>
+      <div class="dot"></div>
+    </nav>
+    
+    <form action="#" th:action="@{/adduser}" method="post" th:object="${user}">
+    <div>
+    <label> User </label> <input type="text"/>
+    
+    <label> Password </label><input type="text" />
+    <input type="submit" value="Add User">
+    <button> Registrati </button>
+    </div>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+body {
+    background-color: white;}
+
+.div1 {
+ 
+ margin: 50px;
+ margin-top: 150px;
+ font-size: xx-large;
+ text-align: center;
+ 
+}
+.div2 {
+    
+    margin: 50px;
+    margin-top: 50px;
+    font-size: xx-large;
+    text-align: center;
+    
+   }
+.div1 h1 
+{
+    
+   /* font-family: 'Rubik Glitch', cursive; */
+    color:black;}
+.div2 h1 
+{
+    
+  /*  font-family: 'Rubik Glitch', cursive; */
+    color:black;}

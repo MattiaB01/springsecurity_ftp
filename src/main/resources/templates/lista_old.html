@@ -1,0 +1,44 @@
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" th:href="@{styles/lista.css}">
+	<title> Lista files </title>
+	
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="items">
+		  <div class="items-head">
+			<p>Lista dei file presenti</p>
+			<hr>
+		  </div>
+		  <div th:switch="${files}">
+		  <div class="items-body">
+		  	<p th:case="null">Lista vuota</p>
+		  	<div th:case="*">
+			<div class="items-body-content" th:each="file : ${files}">
+			
+				
+			  <span th:text="${file}"></span>
+			 
+			  
+			  <button class="elimina"><a th:href="@{/delete/{file}(file=${file})}">elimina</a></button>
+			   <button class="download" ><a th:href="@{/download/{file}(file=${file})}">download</a></button>
+			  </div>
+			  	
+			</div>
+			  </div>
+			
+			
+			
+			
+		  </div>
+		</div>
+	  </div>
+	 
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" th:href="@{styles/main.css}">
+<title> WebApp Mattia Bonfanti </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+<body>
+  <body>
+    <div class="title">
+      <p>DOWNLOAD<p>
+
+
+    </div>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h2>Last Firmware</h2>
+            <div class="desc">
+              <p>Ver 3.0</p>
+           <button><a href="/files/file3.txt" download="file3.txt">Download</a></button>
+            </div>
+            <div class="desc">
+              <p>Ver 2.0</p>
+            <button><a href="/files/file2.txt" download="file2.txt">Download</a></button>
+            </div>
+            <div class="desc">
+              <p>Ver 1.0</p>
+            <button><a href="/files/file1.txt" download="file1.txt">Download</a></button>
+            </div>
+
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="logout">
+       <a th:href="@{/logout}"> Logout </a>
+    </div>
+</body>
+</body>
+</html>

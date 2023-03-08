@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" th:href="@{styles/index.css}">
+<title> Registrati </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+<body>
+  <body>
+    <div class="title">
+      <p>Mattia Bonfanti<p>
+
+       
+    </div>
+    <div class="login-page">
+      
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>Registrazione</h3>
+            <p>Scegli un Username ed una Password</p>
+          </div>
+        </div>
+        <form class="login-form" th:action="@{/adduser}" th:object="${users}" method="post">
+          <input type="text" placeholder="username"  th:field="*{username}" />
+          <input type="text" placeholder="password" th:field="*{password}"/>
+          <button>Registrati</button>
+          <p class="message" >Crea il tuo account. Puoi eliminarlo quando vuoi<a href="#"></a></p>
+        </form>
+      
+     
+      </div>
+ <div class="prova">
+       <a th:href="@{/index}"><p>torna al login<p></a> </div>
+    </div>
+    
+    <div class="error" th:text="${errore}">  </div>
+
+</body>
+</html>
+
